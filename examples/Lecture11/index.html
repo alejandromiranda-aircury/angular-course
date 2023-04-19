@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="MsgApp">
+  <head>
+    <meta charset="utf-8" />
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>Expression and Interpolation</title>
+  </head>
+  <body>
+    <h1>Expression and Interpolation</h1>
+    <div ng-controller="MsgController">
+      Original : {{sayMessage()}} <br/>
+      Loves : {{sayLovesMessage()}}<br/>
+      Truth: {{sayLovesMessage() | truth : 'sushi' : 'pizza'}}<br/>
+      Big Truth: {{sayLovesMessage() | truth : 'sushi' : 'pizza' | uppercase}}
+
+      <br>Cost: {{ cookieCost | currency :"€" : 4}}
+    </div>
+  </body>
+</html>
